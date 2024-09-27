@@ -1,0 +1,13 @@
+{
+  "main": "Templates.js",
+  "dependencies": {
+    "angular-expressions": "^1.2.1",
+    "docxtemplater": "^3.46.2",
+    "jszip": "^3.10.1",
+    "pizzip": "^3.1.7"
+  },
+  "scripts": {
+  
+    "start": "node CVSMakers.js"
+  }
+}

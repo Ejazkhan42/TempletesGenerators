@@ -1,0 +1,17 @@
+# Ignore everything in the specified directories
+Files/*.docx
+Files/*.rft
+JSON/*.json
+node_modules/*
+Template/*.docx
+Template/*.doc
+Template/*.txt
+PDF/*.pdf
+
+# But do not ignore the directories themselves
+!Files/
+!JSON/
+!Template/
+!PDF/
+Files/~$SS.rtf
+Templete
