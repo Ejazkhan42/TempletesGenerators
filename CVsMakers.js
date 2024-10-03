@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 
 
-const templateContent = fs.readFileSync(path.resolve(__dirname, "Template/Article #2_table_V2.docx"), "binary");
+const templateContent = fs.readFileSync(path.resolve(__dirname, "Template/Classic #3_table_V2.docx"), "binary");
 const jsonDir = path.resolve(__dirname, "JSON");
 const jsonFiles = fs.readdirSync(jsonDir).filter(file => file.endsWith('.json'));
 
@@ -31,7 +31,13 @@ expressionParser.filters.clean = function (input) {
     if (!input) return [];
     const Fields={"Values":{}}
     const Lines={};
-    const line=input.replace(/\*/g, '').replace(/\t/g, '').split('\n')
+    const line=input
+    .replace(/\*/g, '')
+    .replace(/\t/g, '')
+    .replace(/<p>/g, '')
+    .replace(/<\/p>/g, '')
+    .trim()
+    .split('\n') 
     Fields["Values"]=line
     return Fields
 }
